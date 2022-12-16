@@ -75,7 +75,7 @@ def measure(cursor, extraction_method):
 
 
 powers_of_two = 21
-n_rows = 2 ** powers_of_two
+n_rows = 2**powers_of_two
 n_runs = 10
 column_types = [
     "INTEGER"

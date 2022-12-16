@@ -22,6 +22,7 @@ os-base:
         wget -q https://packages.microsoft.com/config/debian/9/prod.list -O- > /etc/apt/sources.list.d/mssql-release.list && \
         apt-get update && \
         ACCEPT_EULA=Y apt-get install msodbcsql17 mssql-tools && \
+	ls -l  /opt/microsoft/msodbcsql17/lib64/ && \
         odbcinst -i -d -f /opt/microsoft/msodbcsql17/etc/odbcinst.ini
 
     # not used for the moment as Exasol is not tested here
@@ -44,7 +45,7 @@ python:
         ninja \
         cmake \
         coveralls \
-        gmock \
+        gmock=1.10.0 \
         gtest \
         cxx-compiler \
         mock \

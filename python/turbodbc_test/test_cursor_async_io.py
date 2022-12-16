@@ -12,4 +12,4 @@ def test_many_batches_with_async_io(dsn, configuration):
                 cursor.execute(f"INSERT INTO {table_name} SELECT * FROM {table_name}")
 
             cursor.execute(f"SELECT * FROM {table_name}")
-            assert sum(1 for _ in cursor) == 2 ** 16
+            assert sum(1 for _ in cursor) == 2**16

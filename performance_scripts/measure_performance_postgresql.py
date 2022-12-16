@@ -88,7 +88,7 @@ def measure(cursor, extraction_method):
 
 # if __name__ == "__main__":
 powers_of_two = 10
-n_rows = 2 ** powers_of_two
+n_rows = 2**powers_of_two
 n_runs = 10
 column_types = [
     "INTEGER",
